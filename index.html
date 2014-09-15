@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>YYCjs Slides</title>
+  <title>JavaScript all the tests!</title>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,900,700,500' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="theme/font-awesome.css">
   <style type="text/css">
@@ -405,6 +405,7 @@ body {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-weight: 100;
   color: #333333;
+  background: #FFFFFF;
 }
 
 h1 {
@@ -425,6 +426,14 @@ h3 {
 
 p {
   font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, p, ul {
+  margin: 10px 0;
+}
+
+ul {
+  padding: 20px 0 20px 60px;
 }
 
 .progress-bar {
@@ -471,6 +480,16 @@ p {
   padding: 30px;
 }
 
+.title .slide-content {
+  display: table;
+}
+
+.title h1 {
+  display: table-cell; 
+  vertical-align: middle;
+  z-index: 10;
+}
+
 .presenter img {
   height: 200px;
   width: 200px;
@@ -506,6 +525,10 @@ p {
   padding: 0 10px;
 }
 
+.sponsors h1 {
+  margin: 20px 0 40px 0;
+}
+
 .sponsors p {
   float: left;
   text-align: center;
@@ -517,6 +540,13 @@ p {
   width: 100%;
   max-width: 240px;
 }
+
+.image p > img {
+  max-width: 600px;
+  max-height: 400px;
+  margin: 20px auto;
+  display: table-cell;
+}
   </style>
 </head>
 <body>
@@ -525,12 +555,8 @@ p {
   </div>
 
   <div class="slide" id="slide-1">
-    <section class="slide-content"><h1 id="yyc-js-presents-">YYC.js Presents:</h1>
-<h2 id="an-epic-slide-template">An Epic Slide Template</h2>
-<h3 id="that-totally-kicks-some-ass">That totally kicks some ass</h3>
-<h4 id="kind-of-like-chuck-norris">Kind of like Chuck Norris</h4>
-<h5 id="and-jackie-chan">And Jackie Chan</h5>
-<p>Maybe even Chris Rock</p>
+    <section class="slide-content"><h1 id="javascript-all-the-tests-">JavaScript all the tests!</h1>
+<h2 id="from-manual-debugging-tools-to-automated-testing">From manual debugging tools to automated testing</h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
@@ -565,14 +591,243 @@ p {
 </section>
   </div>
   <div class="slide hidden" id="slide-6">
-    <section class="slide-content"><h1 id="last-month">Last Month</h1>
+    <section class="slide-content"><h1 id="what-did-we-do-this-year-again-">What did we do this year again?</h1>
 <ul>
-<li>Something awesome</li>
-<li>More awesomeness</li>
+<li><a href="https://medium.com/@daffl/javascript-the-weird-parts-8ff3da55798e">JavaScript - The weird parts</a></li>
+<li><a href="http://yycjs.com/jquery-202-and-web-components/#slide1">jQuery 202 and web components</a></li>
+<li><a href="http://yycjs.com/nodejs-like-a-boss/">NodeJS like a boss</a></li>
+<li><a href="http://yycjs.com/js-workflow/">Optimize your JS workflows</a></li>
+<li><a href="http://yycjs.com/use-a-framework/">Use a framework?</a></li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
+    <section class="slide-content"><h1 id="javascript-testing">JavaScript testing</h1>
+<p>JavaScript testing very <em>&quot;young&quot;</em> and still not a common practise.</p>
+<h4 id="different-environments">Different environments</h4>
+<ul>
+<li>Client<ul>
+<li>Requires both, functional and unit testing</li>
+<li>Browsers</li>
+<li>Screen resolutions (mobile)</li>
+<li>Internet Explorer and old Androids (Boo!)</li>
+</ul>
+</li>
+<li>Server (NodeJS)</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h1 id="manual-testing-and-debugging-tools">Manual testing and debugging tools</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><h1 id="-browserstack-http-browserstack-com-"><a href="http://browserstack.com">BrowserStack</a></h1>
+<h2 id="live-web-based-cross-browser-testing">Live web-based cross browser testing</h2>
+<p><img src="images/browserstack.png" alt="Browserstack" title="Browserstack"></p>
+<ul>
+<li>Browsers on VMs in Mac OS and Windows, mobile emulators</li>
+<li>RESTful API</li>
+<li>Local tunnelling</li>
+<li>Screenshots</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-10">
+    <section class="slide-content"><h1 id="tools-and-services">Tools and services</h1>
+<ul>
+<li><a href="https://modern.ie/en-us">modern.ie</a> for virtual machines with Internet Explorer</li>
+<li><a href="https://developer.apple.com/xcode/">XCode</a> and iOS simulator</li>
+<li><a href="http://www.genymotion.com/">Genymotion</a> for Android emulators (or the <a href="http://developer.android.com/sdk/index.html">Android SDK</a>)</li>
+<li><a href="https://saucelabs.com/">SauceLabs</a> for automated testing on real devices</li>
+<li><a href="http://www.keynote.com/solutions/testing/mobile-testing">KeyNote</a> for testing on real mobile devices</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-11">
+    <section class="slide-content"><h1 id="mobile-testing-and-debugging">Mobile testing and debugging</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><h1 id="ios-remote-debugging">iOS remote debugging</h1>
+<ul>
+<li>In iOS go to <code>Settings</code> -&gt; <code>Safari</code> -&gt; <code>Advanced</code>, enable <code>Web Inspector</code></li>
+<li>Connect to your Mac via USB</li>
+<li>In MacOS open Safari (7.x), go to <code>Preferences</code> -&gt; <code>Advanced</code>, check <code>Show Develop menu in menu bar</code></li>
+<li>Open web page in iOS</li>
+<li>Device will show up in the <em>Develop</em> menu</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-13">
+    <section class="slide-content"><h1 id="android-remote-debuggin">Android remote debuggin</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><h1 id="unit-testing">Unit Testing</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><h2 id="what-">What?</h2>
+<ul>
+<li>Split functionality into contained units. Ideally each function should perform one <strong>unit</strong> of work.</li>
+<li>Ideally we also want to isolate the code to be tested (using mocks, stubs, test harnesses)</li>
+<li>Test each part.<ul>
+<li>Boundary Value Testing</li>
+<li>White Box Testing</li>
+</ul>
+</li>
+</ul>
+<p>You don&#39;t need to write tests for every scenario (and you should&#39;t). Try and kill many birds with one stone.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h2 id="javascript-unit-testing">JavaScript unit testing</h2>
+<p><a href="http://pivotal.github.com/jasmine/" target="_blank" style="border: none;">
+  <img src="images/jasmine_logo.png" alt="Jasmine Logo" />
+</a>
+<a href="http://qunitjs.com" target="_blank" style="border: none; float: right; margin-top: 6em;">
+  <img src="images/qunit_logo.png" alt="QUnit Logo" />
+</a>
+<a href="http://visionmedia.github.com/mocha/" target="_blank" style="border: none; margin-top: 4em;">
+  <img src="images/mocha_logo.png" alt="Mocha Logo" />
+</a></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h2 id="a-blog-post">A blog post</h2>
+<pre><code>!javascript
+var BlogPost = function(title, content, date) {
+    this.title = title;
+    this.content = content.replace(/n/g, &quot;&lt;br /&gt;&quot;);
+    this.date = date || new Date();
+    this.published = false;
+}
+
+BlogPost.prototype.publish = function() {
+    this.published = true;
+}
+
+BlogPost.prototype.toString = function() {
+    if(!this.published) {
+        throw &quot;This blog post is not published&quot;;
+    }
+    return &quot;&lt;h1&gt;&quot; + this.title + &quot;&lt;/h1&gt;&quot; +
+        &quot;&lt;h6&gt;Published on &quot; + this.date.toString() + &quot;&lt;/h6&gt;&quot; +
+        &quot;&lt;p&gt;&quot; + this.content + &quot;&lt;/p&gt;&quot;;
+}</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h1 id="running-tests">Running tests</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-19">
+    <section class="slide-content"><h2 id="headless-browsers">Headless Browsers</h2>
+<p><img style="float: right;" alt="PhantomJS logo" src="images/phantomjs_logo.png" /></p>
+<h3 id="-phantomjs-http-phantomjs-org-"><a href="http://phantomjs.org/">PhantomJS</a></h3>
+<ul>
+<li>Webkit based.</li>
+<li>Written in C++. API in Javascript and Coffeescript.</li>
+</ul>
+<h3 id="-zombie-js-http-zombie-labnotes-org-"><a href="http://zombie.labnotes.org/">Zombie.js</a></h3>
+<ul>
+<li>Written in Coffeescript and NodeJS.</li>
+<li>Use jQuery on server side.</li>
+</ul>
+<p><strong>Pro</strong>: Fast, works well for automated acceptance and UI tests</p>
+<p><strong>Con</strong>: Doesn&#39;t test actual browsers</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><h2 id="test-runners">Test runners</h2>
+<p>Automate running your JavaScript tests <strong>in any available browser</strong> and make the results persistent.</p>
+<ul>
+<li><a href="http://karma-runner.github.io">Karma</a></li>
+<li><a href="https://github.com/airportyh/testem">Testem</a></li>
+<li><a href="http://github.com/bitovi/testee">Testee</a></li>
+<li><a href="http://yuilibrary.com/projects/yeti/">YUI Yeti</a></li>
+<li><a href="http://docs.busterjs.org/en/latest/">BusterJS</a></li>
+<li><a href="http://theintern.io/">The Intern</a></li>
+</ul>
+<p>Services</p>
+<ul>
+<li><a href="https://ci.testling.com/">Testling CI</a></li>
+<li><a href="http://swarm.jquery.org/">TestSwarm</a></li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><h2 id="testee">Testee</h2>
+<p>Testee.JS runs your Mocha, QUnit or Jasmine unit tests from the command line using any browser.</p>
+<ul>
+<li>Runs on all browsers (supporting SocketIO)</li>
+<li>Many output formats
+<img src="images/testee_logo.png" alt="Testee Logo" style="float: right;" /></li>
+<li>CI integration</li>
+<li>BrowserStack support</li>
+<li>GruntJS Task</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-22">
+    <section class="slide-content"><h2 id="continuous-integration">Continuous Integration</h2>
+<ul>
+<li>Use source control management system (SCM) for builds</li>
+<li>Run reports, tests, deploy or other tools on each SCM change</li>
+<li>Popular open source CI servers:<ul>
+<li><a href="http://jenkins-ci.org/">Jenkins</a>: Probably most popular CI server, formerly Hudson</li>
+<li><a href="http://cruisecontrol.sourceforge.net/">CruiseControl</a>: CI framework initially by Thoughtworks</li>
+<li><a href="http://travis-ci.org">TravisCI</a>: Distributed build platform for the open source community</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/jenkins.png" alt="Mr. Jenkins" style="margin-top: -1.5em;" /></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h1 id="functional-testing">Functional testing</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h2 id="function-web-application-testing">Function web application testing</h2>
+<h3 id="open-source-libraries">Open Source Libraries</h3>
+<ul>
+<li><a href="http://zombie.labnotes.org/">Zombie.js</a> - Headles browser with automation API</li>
+<li><a href="http://casperjs.org/">CasperJS</a> - Website automation using PhantomJS</li>
+<li><a href="http://funcunit.com">FuncUnit</a> - Clients side functional testing</li>
+<li><a href="http://docs.seleniumhq.org/">Selenium</a> - Browser automation toool</li>
+</ul>
+<h3 id="services">Services</h3>
+<ul>
+<li><a href="https://saucelabs.com/">SauceLabs</a></li>
+<li><a href="http://utest.com">uTest</a></li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h2 id="__funcunit__"><strong>FuncUnit</strong></h2>
+<p>Functional testing library built on top of <strong>jQuery</strong> and <strong>QUnit</strong>:</p>
+<ul>
+<li>Use jQuery syntax to emulate user input</li>
+<li>Write QUnit style tests</li>
+</ul>
+<p><strong>Testing a <a href="http://todomvc.com">TodoMVC</a> app</strong></p>
+<pre><code>!javascript
+test(&#39;TodoMVC app&#39;, function() {
+    S(&#39;#new-todo&#39;).click().type(&#39;Do some nerdy stuff\r&#39;).wait(500);
+    S(&#39;#todo-list li&#39;).size(1, &#39;Got one Todo&#39;);
+    S(&#39;#todo-list li:first label&#39;)
+        .html(&#39;Do some nerdy stuff&#39;, &#39;Todo has correct text&#39;);
+    S(&#39;#todo-count&#39;).html(/&lt;strong&gt;1&lt;\/strong&gt;(.*)item(.*)left/,
+        &#39;Todo count text is correct&#39;);
+});</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-26">
+    <section class="slide-content"></section>
+  </div>
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h1 id="next-month">Next Month</h1>
 <ul>
 <li>Something awesome</li>

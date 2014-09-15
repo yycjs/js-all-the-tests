@@ -1,19 +1,16 @@
-### YYCjs Slide Template
+### JavaScript all the tests!
 
-Our template for our monthly slide deck using [cleaver](http://jdan.github.io/cleaver). Feel free to rip it off if you would like.
+We are back from our summer break and this time things will be all about testing your JavaScript apps. We will talk about testing tools, mobile testing and debugging, writing unit tests and how to automate your tests.
 
-To use it locally, there are 3 steps to instant gratification:
+This meetup will be split into two parts. The first half-hour will be about a beginner focussed topic and in the second part we will step it up a notch and do something more advanced. This time:
 
-1. Write [Markdown](http://daringfireball.net/projects/markdown/)
-2. `npm install -g cleaver`
-3. `cleaver path/to/slides.md`
+1) Testing tools
 
+- Testing and debugging all browsers and mobile
+- Frontend testing tools
 
-#### Special Classes
+2) Test automation
 
-To make your slides look a little nice there are a few special classes that you can use with this theme.
-
-* `title`
-* `presenter`
-* `sponsors`
-* `image`
+- Unit testing
+- Automated functional testing
+- Continuous integration
