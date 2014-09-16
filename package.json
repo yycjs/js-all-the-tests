@@ -1,21 +1,24 @@
 {
-  "name": "slide-template",
-  "description": "The YYCJS slide template",
-  "version": "0.3.0",
+  "name": "js-all-the-tests",
+  "description": "JavaScript testing - from tools to automation",
+  "version": "0.0.0",
   "private": true,
   "homepage": "http://yycjs.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yycjs/slide-template.git"
+    "url": "git@github.com:yycjs/js-all-the-tests.git"
   },
   "engines": {
     "node": "~0.10.0"
   },
   "scripts": {
-    "start": "grunt",
-    "test": "mocha mocha/test.js"
+    "test": "testscript"
   },
   "devDependencies": {
-    "mocha": "~1.12.0"
+    "grunt": "^0.4.5",
+    "grunt-contrib-qunit": "^0.5.2",
+    "grunt-simple-mocha": "^0.4.0",
+    "mocha": "~1.12.0",
+    "testee": "^0.1.0"
   }
 }
