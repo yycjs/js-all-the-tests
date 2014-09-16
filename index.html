@@ -485,7 +485,7 @@ ul {
 }
 
 .title h1 {
-  display: table-cell; 
+  display: table-cell;
   vertical-align: middle;
   z-index: 10;
 }
@@ -547,6 +547,34 @@ ul {
   margin: 20px auto;
   display: table-cell;
 }
+
+#slide-8 {
+  background: url('img/browser-wars.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f8faef;
+}
+
+#slide-9 {
+  background: url('img/opendevicelab.jpg');
+  background-size: cover;
+}
+
+#slide-12 {
+  background: url('img/bug.jpg');
+  background-size: cover;
+}
+
+#slide-12 h1 {
+  margin-top: 4em;
+
+}
+
+#slide-12 h1 a {
+  color: #445140;
+}
+
   </style>
 </head>
 <body>
@@ -556,7 +584,7 @@ ul {
 
   <div class="slide" id="slide-1">
     <section class="slide-content"><h1 id="javascript-all-the-tests-">JavaScript all the tests!</h1>
-<h2 id="from-manual-debugging-tools-to-automated-testing">From manual debugging tools to automated testing</h2>
+<h2 id="from-manual-debugging-to-automated-testing">From manual debugging to automated testing</h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
@@ -602,135 +630,180 @@ ul {
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h1 id="javascript-testing">JavaScript testing</h1>
-<p>JavaScript testing very <em>&quot;young&quot;</em> and still not a common practise.</p>
-<h4 id="different-environments">Different environments</h4>
-<ul>
-<li>Client<ul>
-<li>Requires both, functional and unit testing</li>
-<li>Browsers</li>
-<li>Screen resolutions (mobile)</li>
-<li>Internet Explorer and old Androids (Boo!)</li>
-</ul>
-</li>
-<li>Server (NodeJS)</li>
-</ul>
+    <section class="slide-content"><h1 id="manual-webpage-testing">Manual webpage testing</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h1 id="manual-testing-and-debugging-tools">Manual testing and debugging tools</h1>
-</section>
+    <section class="slide-content"></section>
   </div>
   <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h1 id="-browserstack-http-browserstack-com-"><a href="http://browserstack.com">BrowserStack</a></h1>
-<h2 id="live-web-based-cross-browser-testing">Live web-based cross browser testing</h2>
-<p><img src="images/browserstack.png" alt="Browserstack" title="Browserstack"></p>
-<ul>
-<li>Browsers on VMs in Mac OS and Windows, mobile emulators</li>
-<li>RESTful API</li>
-<li>Local tunnelling</li>
-<li>Screenshots</li>
-</ul>
-</section>
+    <section class="slide-content"></section>
   </div>
   <div class="slide hidden" id="slide-10">
-    <section class="slide-content"><h1 id="tools-and-services">Tools and services</h1>
+    <section class="slide-content"><h1 id="tools">Tools</h1>
 <ul>
-<li><a href="https://modern.ie/en-us">modern.ie</a> for virtual machines with Internet Explorer</li>
 <li><a href="https://developer.apple.com/xcode/">XCode</a> and iOS simulator</li>
-<li><a href="http://www.genymotion.com/">Genymotion</a> for Android emulators (or the <a href="http://developer.android.com/sdk/index.html">Android SDK</a>)</li>
-<li><a href="https://saucelabs.com/">SauceLabs</a> for automated testing on real devices</li>
-<li><a href="http://www.keynote.com/solutions/testing/mobile-testing">KeyNote</a> for testing on real mobile devices</li>
+<li><a href="http://developer.android.com/sdk/index.html">Android SDK</a> for Android emulators</li>
+<li><a href="http://www.genymotion.com/">Genymotion</a>: Android emulators that actually work</li>
+<li><a href="https://modern.ie/en-us">modern.ie</a>: Virtual machines with Internet Explorer</li>
+<li><a href="http://www.browsersync.io/">Browsersync</a>: Synchronised browser testing</li>
+<li><a href="http://vanamco.com/ghostlab/">Ghostlab</a>: Synchronized browser testing for web and mobile</li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-11">
-    <section class="slide-content"><h1 id="mobile-testing-and-debugging">Mobile testing and debugging</h1>
+    <section class="slide-content"><h1 id="and-services">And Services</h1>
+<ul>
+<li><a href="https://saucelabs.com/">SauceLabs</a>: Automated testing on real devices</li>
+<li><a href="http://www.keynote.com/solutions/testing/mobile-testing">KeyNote</a>: Testing on real mobile devices</li>
+<li><a href="https://browserling.com/">Browserling</a>: Interactive cross-browser testing</li>
+<li><a href="http://browserstack.com">BrowserStack</a>: Live, Web-Based Browser Testing</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-12">
-    <section class="slide-content"><h1 id="ios-remote-debugging">iOS remote debugging</h1>
-<ul>
-<li>In iOS go to <code>Settings</code> -&gt; <code>Safari</code> -&gt; <code>Advanced</code>, enable <code>Web Inspector</code></li>
-<li>Connect to your Mac via USB</li>
-<li>In MacOS open Safari (7.x), go to <code>Preferences</code> -&gt; <code>Advanced</code>, check <code>Show Develop menu in menu bar</code></li>
-<li>Open web page in iOS</li>
-<li>Device will show up in the <em>Develop</em> menu</li>
-</ul>
+    <section class="slide-content"><h1 id="-mobile-testing-and-debugging-http-www-smashingmagazine-com-2014-09-03-testing-mobile-emulators-simulators-remote-debugging-"><a href="http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging">Mobile testing and debugging</a></h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h1 id="android-remote-debuggin">Android remote debuggin</h1>
+    <section class="slide-content"><h1 id="ios-remote-debugging">iOS remote debugging</h1>
+<ol>
+<li>In iOS go to <code>Settings -&gt; Safari -&gt; Advanced</code><blockquote>
+<p>Enable <code>Web Inspector</code></p>
+</blockquote>
+</li>
+<li>Connect to your Mac via USB or start iOS simulator</li>
+<li>In MacOS open Safari (7.x), go to <code>Preferences -&gt; Advanced</code><blockquote>
+<p>Check <code>Show Develop menu in menu bar</code></p>
+</blockquote>
+</li>
+<li>Open web page in iOS</li>
+<li>Device will show up in the <em>Develop</em> menu</li>
+</ol>
 </section>
   </div>
   <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><h1 id="unit-testing">Unit Testing</h1>
+    <section class="slide-content"><h1 id="android-remote-debugging">Android remote debugging</h1>
+<ol>
+<li>In Android enable USB debugging by going to <code>Settings -&gt; About Phone</code><blockquote>
+<p>Tap <code>Build number</code> 7 times then return to the previous screen</p>
+</blockquote>
+</li>
+<li>Go to <code>Developer Options</code> and confirm <code>USB debugging</code> is checked</li>
+<li>In Google Chrome go to <a href="chrome://inspect">chrome://inspect</a> check <code>Discover USB devices</code></li>
+<li>Connect device via USB and open web page</li>
+<li>Device should show up at <a href="chrome://inspect">chrome://inspect</a></li>
+</ol>
 </section>
   </div>
   <div class="slide hidden" id="slide-15">
-    <section class="slide-content"><h2 id="what-">What?</h2>
-<ul>
-<li>Split functionality into contained units. Ideally each function should perform one <strong>unit</strong> of work.</li>
-<li>Ideally we also want to isolate the code to be tested (using mocks, stubs, test harnesses)</li>
-<li>Test each part.<ul>
-<li>Boundary Value Testing</li>
-<li>White Box Testing</li>
-</ul>
-</li>
-</ul>
-<p>You don&#39;t need to write tests for every scenario (and you should&#39;t). Try and kill many birds with one stone.</p>
+    <section class="slide-content"><h1 id="unit-testing">Unit Testing</h1>
+<h4 id="split-functionality-into-contained-units-">Split functionality into contained units.</h4>
+<blockquote>
+<p>Ideally each function should perform one <strong>unit</strong> of work.</p>
+</blockquote>
+<h4 id="you-don-t-need-to-write-tests-for-every-scenario-">You don&#39;t need to write tests for every scenario.</h4>
+<blockquote>
+<p>Try and kill many birds with one stone.</p>
+</blockquote>
 </section>
   </div>
   <div class="slide hidden" id="slide-16">
-    <section class="slide-content"><h2 id="javascript-unit-testing">JavaScript unit testing</h2>
+    <section class="slide-content"><h1 id="javascript-unit-testing">JavaScript unit testing</h1>
 <p><a href="http://pivotal.github.com/jasmine/" target="_blank" style="border: none;">
-  <img src="images/jasmine_logo.png" alt="Jasmine Logo" />
+  <img src="img/jasmine_logo.png" alt="Jasmine Logo" />
 </a>
 <a href="http://qunitjs.com" target="_blank" style="border: none; float: right; margin-top: 6em;">
-  <img src="images/qunit_logo.png" alt="QUnit Logo" />
+  <img src="img/qunit_logo.png" alt="QUnit Logo" />
 </a>
 <a href="http://visionmedia.github.com/mocha/" target="_blank" style="border: none; margin-top: 4em;">
-  <img src="images/mocha_logo.png" alt="Mocha Logo" />
+  <img src="img/mocha_logo.png" alt="Mocha Logo" />
 </a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-17">
-    <section class="slide-content"><h2 id="a-blog-post">A blog post</h2>
-<pre><code>!javascript
-var BlogPost = function(title, content, date) {
-    this.title = title;
-    this.content = content.replace(/n/g, &quot;&lt;br /&gt;&quot;);
-    this.date = date || new Date();
-    this.published = false;
+    <section class="slide-content"><h1 id="a-blog-post">A blog post</h1>
+<pre><code class="lang-javascript"><span class="keyword">var</span> BlogPost = <span class="keyword">function</span>(title, content, date) {
+    <span class="keyword">this</span>.title = title;
+    <span class="keyword">this</span>.content = content.replace(<span class="regexp">/n/g</span>, <span class="string">"&lt;br /&gt;"</span>);
+    <span class="keyword">this</span>.date = date || <span class="keyword">new</span> Date();
+    <span class="keyword">this</span>.published = <span class="literal">false</span>;
 }
 
-BlogPost.prototype.publish = function() {
-    this.published = true;
+BlogPost.prototype.publish = <span class="keyword">function</span>() {
+    <span class="keyword">this</span>.published = <span class="literal">true</span>;
 }
 
-BlogPost.prototype.toString = function() {
-    if(!this.published) {
-        throw &quot;This blog post is not published&quot;;
+BlogPost.prototype.toString = <span class="keyword">function</span>() {
+    <span class="keyword">if</span>(!<span class="keyword">this</span>.published) {
+        <span class="keyword">throw</span> <span class="string">"This blog post is not published"</span>;
     }
-    return &quot;&lt;h1&gt;&quot; + this.title + &quot;&lt;/h1&gt;&quot; +
-        &quot;&lt;h6&gt;Published on &quot; + this.date.toString() + &quot;&lt;/h6&gt;&quot; +
-        &quot;&lt;p&gt;&quot; + this.content + &quot;&lt;/p&gt;&quot;;
+    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;"</span> + <span class="keyword">this</span>.title + <span class="string">"&lt;/h1&gt;"</span> +
+        <span class="string">"&lt;h6&gt;Published on "</span> + <span class="keyword">this</span>.date.toString() + <span class="string">"&lt;/h6&gt;"</span> +
+        <span class="string">"&lt;p&gt;"</span> + <span class="keyword">this</span>.content + <span class="string">"&lt;/p&gt;"</span>;
 }</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-18">
-    <section class="slide-content"><h1 id="running-tests">Running tests</h1>
+    <section class="slide-content"><h1 id="qunit">QUnit</h1>
+<pre><code class="lang-javascript">module(<span class="string">'Blog post test'</span>);
+
+test(<span class="string">'Date set to current time'</span>, <span class="keyword">function</span>() {
+    <span class="keyword">var</span> post = <span class="keyword">new</span> BlogPost(<span class="string">'Hello'</span>, <span class="string">'Hello world'</span>);
+    equal(<span class="keyword">new</span> Date().getTime(), post.date.getTime(), <span class="string">'Date is correct'</span>);
+});
+
+test(<span class="string">'Generates HTML'</span>, <span class="keyword">function</span>() {
+    <span class="keyword">var</span> now = <span class="keyword">new</span> Date();
+    <span class="keyword">var</span> post = <span class="keyword">new</span> BlogPost(<span class="string">'hello'</span>, <span class="string">'Hello world'</span>, now);
+
+    post.publish();
+
+    equal(post.toString(), <span class="string">"&lt;h1&gt;hello&lt;/h1&gt;"</span> +
+        <span class="string">"&lt;h6&gt;Published on "</span> + now.toString() + <span class="string">"&lt;/h6&gt;"</span> +
+        <span class="string">"&lt;p&gt;Hello world&lt;/p&gt;"</span>, <span class="string">'HTML generated'</span>);
+});</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-19">
-    <section class="slide-content"><h2 id="headless-browsers">Headless Browsers</h2>
-<p><img style="float: right;" alt="PhantomJS logo" src="images/phantomjs_logo.png" /></p>
-<h3 id="-phantomjs-http-phantomjs-org-"><a href="http://phantomjs.org/">PhantomJS</a></h3>
+    <section class="slide-content"><h1 id="mocha">Mocha</h1>
+<pre><code class="lang-javascript">describe(<span class="string">'BlogPost test'</span>, <span class="keyword">function</span>() {
+
+    it(<span class="string">'Should be published at the current time'</span>, <span class="keyword">function</span>() {
+        <span class="keyword">var</span> now = <span class="keyword">new</span> Date();
+        <span class="keyword">var</span> post = <span class="keyword">new</span> BlogPost(<span class="string">'Hello'</span>, <span class="string">'Hello world'</span>);
+
+        assert(now.getTime(), post.date.getTime());
+    });
+
+    it(<span class="string">'Generates some neat HTML'</span>, <span class="keyword">function</span>() {
+        <span class="keyword">var</span> post = <span class="keyword">new</span> BlogPost(<span class="string">'Hello'</span>, <span class="string">'Hello world'</span>);
+
+        post.publish();
+
+        <span class="keyword">var</span> html = post.toString();
+        assert(html.length &gt; <span class="number">0</span>, <span class="string">'Some text generated'</span>);
+    });
+});</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><h1 id="jasmine">Jasmine</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><h1 id="running-tests">Running tests</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-22">
+    <section class="slide-content"><h1 id="headless-browsers">Headless Browsers</h1>
+<p><img style="float: right;" alt="PhantomJS logo" src="img/phantomjs_logo.png" /></p>
+<h4 id="-phantomjs-http-phantomjs-org-"><a href="http://phantomjs.org/">PhantomJS</a></h4>
 <ul>
 <li>Webkit based.</li>
 <li>Written in C++. API in Javascript and Coffeescript.</li>
 </ul>
-<h3 id="-zombie-js-http-zombie-labnotes-org-"><a href="http://zombie.labnotes.org/">Zombie.js</a></h3>
+<h4 id="-zombie-js-http-zombie-labnotes-org-"><a href="http://zombie.labnotes.org/">Zombie.js</a></h4>
 <ul>
 <li>Written in Coffeescript and NodeJS.</li>
 <li>Use jQuery on server side.</li>
@@ -739,39 +812,53 @@ BlogPost.prototype.toString = function() {
 <p><strong>Con</strong>: Doesn&#39;t test actual browsers</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
-    <section class="slide-content"><h2 id="test-runners">Test runners</h2>
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h1 id="automating-with-grunt">Automating with Grunt</h1>
+<p>Run tests in a headless browser and report to <a href="">Grunt</a>:</p>
+<ul>
+<li><a href="https://github.com/gruntjs/grunt-contrib-qunit">Grunt QUnit</a></li>
+<li><a href="https://github.com/gruntjs/grunt-contrib-jasmine">Grunt Jasmine</a></li>
+<li><a href="https://github.com/yaymukund/grunt-simple-mocha">Grunt Simplemocha</a> - Server only</li>
+</ul>
+<pre><code class="lang-javascript"><span class="comment">// Project configuration.</span>
+grunt.initConfig({
+  qunit: {
+    all: [<span class="string">'path/to/test.html'</span>]
+  }
+});
+
+grunt.loadNpmTasks(<span class="string">'grunt-contrib-qunit'</span>);</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h1 id="test-runners">Test runners</h1>
 <p>Automate running your JavaScript tests <strong>in any available browser</strong> and make the results persistent.</p>
 <ul>
+<li><a href="http://github.com/bitovi/testee">Testee</a></li>
 <li><a href="http://karma-runner.github.io">Karma</a></li>
 <li><a href="https://github.com/airportyh/testem">Testem</a></li>
-<li><a href="http://github.com/bitovi/testee">Testee</a></li>
 <li><a href="http://yuilibrary.com/projects/yeti/">YUI Yeti</a></li>
 <li><a href="http://docs.busterjs.org/en/latest/">BusterJS</a></li>
 <li><a href="http://theintern.io/">The Intern</a></li>
-</ul>
-<p>Services</p>
-<ul>
 <li><a href="https://ci.testling.com/">Testling CI</a></li>
-<li><a href="http://swarm.jquery.org/">TestSwarm</a></li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
-    <section class="slide-content"><h2 id="testee">Testee</h2>
+  <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h1 id="testee">Testee</h1>
 <p>Testee.JS runs your Mocha, QUnit or Jasmine unit tests from the command line using any browser.</p>
 <ul>
 <li>Runs on all browsers (supporting SocketIO)</li>
 <li>Many output formats
-<img src="images/testee_logo.png" alt="Testee Logo" style="float: right;" /></li>
+<img src="img/testee_logo.png" alt="Testee Logo" style="float: right;" /></li>
 <li>CI integration</li>
 <li>BrowserStack support</li>
 <li>GruntJS Task</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
-    <section class="slide-content"><h2 id="continuous-integration">Continuous Integration</h2>
+  <div class="slide hidden" id="slide-26">
+    <section class="slide-content"><h1 id="continuous-integration">Continuous Integration</h1>
 <ul>
 <li>Use source control management system (SCM) for builds</li>
 <li>Run reports, tests, deploy or other tools on each SCM change</li>
@@ -781,58 +868,51 @@ BlogPost.prototype.toString = function() {
 <li><a href="http://travis-ci.org">TravisCI</a>: Distributed build platform for the open source community</li>
 </ul>
 </li>
+<li>Hosted CI services<ul>
+<li><a href="https://www.codeship.io/">Codeship</a>: Build and deploy service</li>
+<li><a href="https://circleci.com/">Circle CI</a></li>
 </ul>
-<p><img src="images/jenkins.png" alt="Mr. Jenkins" style="margin-top: -1.5em;" /></p>
+</li>
+</ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h1 id="functional-testing">Functional testing</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
-    <section class="slide-content"><h2 id="function-web-application-testing">Function web application testing</h2>
-<h3 id="open-source-libraries">Open Source Libraries</h3>
+  <div class="slide hidden" id="slide-28">
+    <section class="slide-content"><h1 id="functional-web-application-testing">Functional web application testing</h1>
+<h4 id="open-source-libraries">Open Source Libraries</h4>
 <ul>
 <li><a href="http://zombie.labnotes.org/">Zombie.js</a> - Headles browser with automation API</li>
 <li><a href="http://casperjs.org/">CasperJS</a> - Website automation using PhantomJS</li>
 <li><a href="http://funcunit.com">FuncUnit</a> - Clients side functional testing</li>
 <li><a href="http://docs.seleniumhq.org/">Selenium</a> - Browser automation toool</li>
 </ul>
-<h3 id="services">Services</h3>
-<ul>
-<li><a href="https://saucelabs.com/">SauceLabs</a></li>
-<li><a href="http://utest.com">uTest</a></li>
-</ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
-    <section class="slide-content"><h2 id="__funcunit__"><strong>FuncUnit</strong></h2>
-<p>Functional testing library built on top of <strong>jQuery</strong> and <strong>QUnit</strong>:</p>
+  <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><h1 id="__funcunit__"><strong>FuncUnit</strong></h1>
+<p>Functional testing library built on top of <strong>jQuery</strong> and runs on <strong>QUnit</strong>, <strong>Jasmine</strong> or <strong>Mocha</strong>:</p>
 <ul>
+<li>Write functional tests in your testing library of choice</li>
 <li>Use jQuery syntax to emulate user input</li>
-<li>Write QUnit style tests</li>
 </ul>
 <p><strong>Testing a <a href="http://todomvc.com">TodoMVC</a> app</strong></p>
-<pre><code>!javascript
-test(&#39;TodoMVC app&#39;, function() {
-    S(&#39;#new-todo&#39;).click().type(&#39;Do some nerdy stuff\r&#39;).wait(500);
-    S(&#39;#todo-list li&#39;).size(1, &#39;Got one Todo&#39;);
-    S(&#39;#todo-list li:first label&#39;)
-        .html(&#39;Do some nerdy stuff&#39;, &#39;Todo has correct text&#39;);
-    S(&#39;#todo-count&#39;).html(/&lt;strong&gt;1&lt;\/strong&gt;(.*)item(.*)left/,
-        &#39;Todo count text is correct&#39;);
+<pre><code class="lang-javascript">test(<span class="string">'TodoMVC app'</span>, <span class="keyword">function</span>() {
+    S(<span class="string">'#new-todo'</span>).click().type(<span class="string">'Do some nerdy stuff\r'</span>).wait(<span class="number">500</span>);
+    S(<span class="string">'#todo-list li'</span>).size(<span class="number">1</span>, <span class="string">'Got one Todo'</span>);
+    S(<span class="string">'#todo-list li:first label'</span>)
+        .html(<span class="string">'Do some nerdy stuff'</span>, <span class="string">'Todo has correct text'</span>);
+    S(<span class="string">'#todo-count'</span>).html(<span class="regexp">/&lt;strong&gt;1&lt;\/strong&gt;(.*)item(.*)left/</span>,
+        <span class="string">'Todo count text is correct'</span>);
 });</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
-    <section class="slide-content"></section>
-  </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h1 id="next-month">Next Month</h1>
-<ul>
-<li>Something awesome</li>
-<li>More awesomeness</li>
-</ul>
+<h2 id="js-bash">JS bash</h2>
+<p><strong>RXJS and Functional Reactive Programming</strong></p>
 </section>
   </div>
 

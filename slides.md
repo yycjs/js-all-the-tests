@@ -8,7 +8,7 @@ logo: theme/logo.png
 
 # JavaScript all the tests!
 
-## From manual debugging tools to automated testing
+## From manual debugging to automated testing
 
 --
 
@@ -57,134 +57,182 @@ logo: theme/logo.png
 
 --
 
-# JavaScript testing
-
-JavaScript testing very *"young"* and still not a common practise.
-
-#### Different environments
-
-- Client
-	- Requires both, functional and unit testing
-	- Browsers
-	- Screen resolutions (mobile)
-	- Internet Explorer and old Androids (Boo!)
-- Server (NodeJS)
+# Manual webpage testing
 
 --
 
-# Manual testing and debugging tools
+--
 
 --
 
-# [BrowserStack](http://browserstack.com)
+# Tools
 
-## Live web-based cross browser testing
-
-![Browserstack](images/browserstack.png "Browserstack")
-
-- Browsers on VMs in Mac OS and Windows, mobile emulators
-- RESTful API
-- Local tunnelling
-- Screenshots
-
---
-
-# Tools and services
-
-- [modern.ie](https://modern.ie/en-us) for virtual machines with Internet Explorer
 - [XCode](https://developer.apple.com/xcode/) and iOS simulator
-- [Genymotion](http://www.genymotion.com/) for Android emulators (or the [Android SDK](http://developer.android.com/sdk/index.html))
-- [SauceLabs](https://saucelabs.com/) for automated testing on real devices
-- [KeyNote](http://www.keynote.com/solutions/testing/mobile-testing) for testing on real mobile devices
+- [Android SDK](http://developer.android.com/sdk/index.html) for Android emulators
+- [Genymotion](http://www.genymotion.com/): Android emulators that actually work
+- [modern.ie](https://modern.ie/en-us): Virtual machines with Internet Explorer
+- [Browsersync](http://www.browsersync.io/): Synchronised browser testing
+- [Ghostlab](http://vanamco.com/ghostlab/): Synchronized browser testing for web and mobile
 
 --
 
-# Mobile testing and debugging
+# And Services
+
+- [SauceLabs](https://saucelabs.com/): Automated testing on real devices
+- [KeyNote](http://www.keynote.com/solutions/testing/mobile-testing): Testing on real mobile devices
+- [Browserling](https://browserling.com/): Interactive cross-browser testing
+- [BrowserStack](http://browserstack.com): Live, Web-Based Browser Testing
+
+--
+
+# [Mobile testing and debugging](http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging)
 
 --
 
 # iOS remote debugging
 
-- In iOS go to `Settings` -> `Safari` -> `Advanced`, enable `Web Inspector`
-- Connect to your Mac via USB
-- In MacOS open Safari (7.x), go to `Preferences` -> `Advanced`, check `Show Develop menu in menu bar`
-- Open web page in iOS
-- Device will show up in the *Develop* menu
+1. In iOS go to `Settings -> Safari -> Advanced`
+	> Enable `Web Inspector`
+2. Connect to your Mac via USB or start iOS simulator
+3. In MacOS open Safari (7.x), go to `Preferences -> Advanced`
+	> Check `Show Develop menu in menu bar`
+4. Open web page in iOS
+5. Device will show up in the *Develop* menu
 
 --
 
-# Android remote debuggin
+# Android remote debugging
+
+1. In Android enable USB debugging by going to `Settings -> About Phone`
+	> Tap `Build number` 7 times then return to the previous screen
+2. Go to `Developer Options` and confirm `USB debugging` is checked
+3. In Google Chrome go to [chrome://inspect](chrome://inspect) check `Discover USB devices`
+4. Connect device via USB and open web page
+5. Device should show up at [chrome://inspect](chrome://inspect)
 
 --
 
 # Unit Testing
 
---
+#### Split functionality into contained units.
 
-## What?
+> Ideally each function should perform one __unit__ of work.
 
-- Split functionality into contained units. Ideally each function should perform one __unit__ of work.
-- Ideally we also want to isolate the code to be tested (using mocks, stubs, test harnesses)
-- Test each part.
-	- Boundary Value Testing
-	- White Box Testing
+#### You don't need to write tests for every scenario.
 
-You don't need to write tests for every scenario (and you should't). Try and kill many birds with one stone.
+> Try and kill many birds with one stone.
 
 --
 
-## JavaScript unit testing
+# JavaScript unit testing
 
 <a href="http://pivotal.github.com/jasmine/" target="_blank" style="border: none;">
-  <img src="images/jasmine_logo.png" alt="Jasmine Logo" />
+  <img src="img/jasmine_logo.png" alt="Jasmine Logo" />
 </a>
 <a href="http://qunitjs.com" target="_blank" style="border: none; float: right; margin-top: 6em;">
-  <img src="images/qunit_logo.png" alt="QUnit Logo" />
+  <img src="img/qunit_logo.png" alt="QUnit Logo" />
 </a>
 <a href="http://visionmedia.github.com/mocha/" target="_blank" style="border: none; margin-top: 4em;">
-  <img src="images/mocha_logo.png" alt="Mocha Logo" />
+  <img src="img/mocha_logo.png" alt="Mocha Logo" />
 </a>
 
 --
 
-## A blog post
+# A blog post
 
-	!javascript
-	var BlogPost = function(title, content, date) {
-		this.title = title;
-		this.content = content.replace(/n/g, "<br />");
-		this.date = date || new Date();
-		this.published = false;
-	}
+```javascript
+var BlogPost = function(title, content, date) {
+	this.title = title;
+	this.content = content.replace(/n/g, "<br />");
+	this.date = date || new Date();
+	this.published = false;
+}
 
-	BlogPost.prototype.publish = function() {
-		this.published = true;
-	}
+BlogPost.prototype.publish = function() {
+	this.published = true;
+}
 
-	BlogPost.prototype.toString = function() {
-		if(!this.published) {
-			throw "This blog post is not published";
-		}
-		return "<h1>" + this.title + "</h1>" +
-			"<h6>Published on " + this.date.toString() + "</h6>" +
-			"<p>" + this.content + "</p>";
+BlogPost.prototype.toString = function() {
+	if(!this.published) {
+		throw "This blog post is not published";
 	}
+	return "<h1>" + this.title + "</h1>" +
+		"<h6>Published on " + this.date.toString() + "</h6>" +
+		"<p>" + this.content + "</p>";
+}
+```
+
+--
+
+# QUnit
+
+```javascript
+module('Blog post test');
+
+test('Date set to current time', function() {
+	var post = new BlogPost('Hello', 'Hello world');
+	equal(new Date().getTime(), post.date.getTime(), 'Date is correct');
+});
+
+test('Generates HTML', function() {
+	var now = new Date();
+	var post = new BlogPost('hello', 'Hello world', now);
+
+	post.publish();
+
+	equal(post.toString(), "<h1>hello</h1>" +
+		"<h6>Published on " + now.toString() + "</h6>" +
+		"<p>Hello world</p>", 'HTML generated');
+});
+```
+
+--
+
+# Mocha
+
+```javascript
+describe('BlogPost test', function() {
+
+	it('Should be published at the current time', function() {
+		var now = new Date();
+		var post = new BlogPost('Hello', 'Hello world');
+
+		assert(now.getTime(), post.date.getTime());
+	});
+
+	it('Generates some neat HTML', function() {
+		var post = new BlogPost('Hello', 'Hello world');
+
+		post.publish();
+
+		var html = post.toString();
+		assert(html.length > 0, 'Some text generated');
+	});
+});
+```
+
+--
+
+# Jasmine
+
+
+
 --
 
 # Running tests
 
 --
 
-## Headless Browsers
+# Headless Browsers
 
-<img style="float: right;" alt="PhantomJS logo" src="images/phantomjs_logo.png" />
+<img style="float: right;" alt="PhantomJS logo" src="img/phantomjs_logo.png" />
 
-### [PhantomJS](http://phantomjs.org/)
+#### [PhantomJS](http://phantomjs.org/)
 
 - Webkit based.
 - Written in C++. API in Javascript and Coffeescript.
 
-### [Zombie.js](http://zombie.labnotes.org/)
+#### [Zombie.js](http://zombie.labnotes.org/)
 
 - Written in Coffeescript and NodeJS.
 - Use jQuery on server side.
@@ -195,40 +243,55 @@ __Con__: Doesn't test actual browsers
 
 --
 
-## Test runners
+# Automating with Grunt
 
-Automate running your JavaScript tests __in any available browser__ and make the results persistent.
+Run tests in a headless browser and report to [Grunt]():
 
-- [Karma](http://karma-runner.github.io)
-- [Testem](https://github.com/airportyh/testem)
-- [Testee](http://github.com/bitovi/testee)
-- [YUI Yeti](http://yuilibrary.com/projects/yeti/)
-- [BusterJS](http://docs.busterjs.org/en/latest/)
-- [The Intern](http://theintern.io/)
+- [Grunt QUnit](https://github.com/gruntjs/grunt-contrib-qunit)
+- [Grunt Jasmine](https://github.com/gruntjs/grunt-contrib-jasmine)
+- [Grunt Simplemocha](https://github.com/yaymukund/grunt-simple-mocha) - Server only
 
-Services
+```javascript
+// Project configuration.
+grunt.initConfig({
+  qunit: {
+    all: ['path/to/test.html']
+  }
+});
 
-- [Testling CI](https://ci.testling.com/)
-- [TestSwarm](http://swarm.jquery.org/)
+grunt.loadNpmTasks('grunt-contrib-qunit');
+```
 
 --
 
-## Testee
+# Test runners
 
+Automate running your JavaScript tests __in any available browser__ and make the results persistent.
+
+- [Testee](http://github.com/bitovi/testee)
+- [Karma](http://karma-runner.github.io)
+- [Testem](https://github.com/airportyh/testem)
+- [YUI Yeti](http://yuilibrary.com/projects/yeti/)
+- [BusterJS](http://docs.busterjs.org/en/latest/)
+- [The Intern](http://theintern.io/)
+- [Testling CI](https://ci.testling.com/)
+
+--
+
+# Testee
 
 Testee.JS runs your Mocha, QUnit or Jasmine unit tests from the command line using any browser.
 
 - Runs on all browsers (supporting SocketIO)
 - Many output formats
-<img src="images/testee_logo.png" alt="Testee Logo" style="float: right;" />
+<img src="img/testee_logo.png" alt="Testee Logo" style="float: right;" />
 - CI integration
 - BrowserStack support
 - GruntJS Task
 
-
 --
 
-## Continuous Integration
+# Continuous Integration
 
 - Use source control management system (SCM) for builds
 - Run reports, tests, deploy or other tools on each SCM change
@@ -236,8 +299,9 @@ Testee.JS runs your Mocha, QUnit or Jasmine unit tests from the command line usi
 	- [Jenkins](http://jenkins-ci.org/): Probably most popular CI server, formerly Hudson
 	- [CruiseControl](http://cruisecontrol.sourceforge.net/): CI framework initially by Thoughtworks
 	- [TravisCI](http://travis-ci.org): Distributed build platform for the open source community
-
-<img src="images/jenkins.png" alt="Mr. Jenkins" style="margin-top: -1.5em;" />
+- Hosted CI services
+	- [Codeship](https://www.codeship.io/): Build and deploy service
+	- [Circle CI](https://circleci.com/)
 
 --
 
@@ -245,46 +309,41 @@ Testee.JS runs your Mocha, QUnit or Jasmine unit tests from the command line usi
 
 --
 
-## Function web application testing
+# Functional web application testing
 
-### Open Source Libraries
+#### Open Source Libraries
 
 - [Zombie.js](http://zombie.labnotes.org/) - Headles browser with automation API
 - [CasperJS](http://casperjs.org/) - Website automation using PhantomJS
 - [FuncUnit](http://funcunit.com) - Clients side functional testing
 - [Selenium](http://docs.seleniumhq.org/) - Browser automation toool
 
-### Services
-
-- [SauceLabs](https://saucelabs.com/)
-- [uTest](http://utest.com)
-
 --
 
-## __FuncUnit__
+# __FuncUnit__
 
-Functional testing library built on top of __jQuery__ and __QUnit__:
+Functional testing library built on top of __jQuery__ and runs on __QUnit__, __Jasmine__ or __Mocha__:
 
+- Write functional tests in your testing library of choice
 - Use jQuery syntax to emulate user input
-- Write QUnit style tests
 
 __Testing a [TodoMVC](http://todomvc.com) app__
 
-	!javascript
-	test('TodoMVC app', function() {
-		S('#new-todo').click().type('Do some nerdy stuff\r').wait(500);
-		S('#todo-list li').size(1, 'Got one Todo');
-		S('#todo-list li:first label')
-			.html('Do some nerdy stuff', 'Todo has correct text');
-		S('#todo-count').html(/<strong>1<\/strong>(.*)item(.*)left/,
-			'Todo count text is correct');
-	});
-
---
+```javascript
+test('TodoMVC app', function() {
+	S('#new-todo').click().type('Do some nerdy stuff\r').wait(500);
+	S('#todo-list li').size(1, 'Got one Todo');
+	S('#todo-list li:first label')
+		.html('Do some nerdy stuff', 'Todo has correct text');
+	S('#todo-count').html(/<strong>1<\/strong>(.*)item(.*)left/,
+		'Todo count text is correct');
+});
+```
 
 --
 
 # Next Month
 
-* Something awesome
-* More awesomeness
+## JS bash
+
+__RXJS and Functional Reactive Programming__
