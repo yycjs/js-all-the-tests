@@ -57,6 +57,18 @@ logo: theme/logo.png
 
 --
 
+# What are we going to do today?
+
+- Manual webpage testing
+- Mobile remote debugging
+- Unit testing
+- Test runners
+- Continuous Integration
+- Functional Testing
+- Everything together (Maybe)
+
+--
+
 # Manual webpage testing
 
 --
@@ -85,11 +97,11 @@ logo: theme/logo.png
 
 --
 
-# [Mobile testing and debugging](http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging)
+# [Mobile testing and remote debugging](http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging)
 
 --
 
-# iOS remote debugging
+# iOS
 
 1. In iOS go to `Settings -> Safari -> Advanced`
 	> Enable `Web Inspector`
@@ -101,7 +113,7 @@ logo: theme/logo.png
 
 --
 
-# Android remote debugging
+# Android
 
 1. In Android enable USB debugging by going to `Settings -> About Phone`
 	> Tap `Build number` 7 times then return to the previous screen
@@ -113,6 +125,10 @@ logo: theme/logo.png
 --
 
 # Unit Testing
+
+--
+
+# Unit? Testing?
 
 #### Split functionality into contained units.
 
@@ -278,16 +294,17 @@ Automate running your JavaScript tests __in any available browser__ and make the
 
 --
 
-# Testee
+# ![Testee Logo](img/testee_logo.png)
 
-Testee.JS runs your Mocha, QUnit or Jasmine unit tests from the command line using any browser.
+Testee runs your *Mocha*, *QUnit* or *Jasmine* unit tests from the command line using any browser.
 
 - Runs on all browsers (supporting SocketIO)
+- Remote URL testing
 - Many output formats
-<img src="img/testee_logo.png" alt="Testee Logo" style="float: right;" />
 - CI integration
 - BrowserStack support
 - GruntJS Task
+- Code coverage
 
 --
 
@@ -346,4 +363,8 @@ test('TodoMVC app', function() {
 
 ## JS bash
 
-__RXJS and Functional Reactive Programming__
+### Functional Reactive Programming with RXJS
+> Kevin Barnabash
+
+### [NodeBB](https://nodebb.org/) and managing your open source projects
+> Julian Lam

@@ -548,7 +548,7 @@ ul {
   display: table-cell;
 }
 
-#slide-8 {
+#slide-9 {
   background: url('img/browser-wars.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -556,22 +556,22 @@ ul {
   background-color: #f8faef;
 }
 
-#slide-9 {
+#slide-10 {
   background: url('img/opendevicelab.jpg');
   background-size: cover;
 }
 
-#slide-12 {
+#slide-13 {
   background: url('img/bug.jpg');
   background-size: cover;
 }
 
-#slide-12 h1 {
+#slide-13 h1 {
   margin-top: 4em;
 
 }
 
-#slide-12 h1 a {
+#slide-13 h1 a {
   color: #445140;
 }
 
@@ -630,16 +630,29 @@ ul {
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h1 id="manual-webpage-testing">Manual webpage testing</h1>
+    <section class="slide-content"><h1 id="what-are-we-going-to-do-today-">What are we going to do today?</h1>
+<ul>
+<li>Manual webpage testing</li>
+<li>Mobile remote debugging</li>
+<li>Unit testing</li>
+<li>Test runners</li>
+<li>Continuous Integration</li>
+<li>Functional Testing</li>
+<li>Everything together (Maybe)</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"></section>
+    <section class="slide-content"><h1 id="manual-webpage-testing">Manual webpage testing</h1>
+</section>
   </div>
   <div class="slide hidden" id="slide-9">
     <section class="slide-content"></section>
   </div>
   <div class="slide hidden" id="slide-10">
+    <section class="slide-content"></section>
+  </div>
+  <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h1 id="tools">Tools</h1>
 <ul>
 <li><a href="https://developer.apple.com/xcode/">XCode</a> and iOS simulator</li>
@@ -651,7 +664,7 @@ ul {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-12">
     <section class="slide-content"><h1 id="and-services">And Services</h1>
 <ul>
 <li><a href="https://saucelabs.com/">SauceLabs</a>: Automated testing on real devices</li>
@@ -661,12 +674,12 @@ ul {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
-    <section class="slide-content"><h1 id="-mobile-testing-and-debugging-http-www-smashingmagazine-com-2014-09-03-testing-mobile-emulators-simulators-remote-debugging-"><a href="http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging">Mobile testing and debugging</a></h1>
+  <div class="slide hidden" id="slide-13">
+    <section class="slide-content"><h1 id="-mobile-testing-and-remote-debugging-http-www-smashingmagazine-com-2014-09-03-testing-mobile-emulators-simulators-remote-debugging-"><a href="http://www.smashingmagazine.com/2014/09/03/testing-mobile-emulators-simulators-remote-debugging">Mobile testing and remote debugging</a></h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h1 id="ios-remote-debugging">iOS remote debugging</h1>
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><h1 id="ios">iOS</h1>
 <ol>
 <li>In iOS go to <code>Settings -&gt; Safari -&gt; Advanced</code><blockquote>
 <p>Enable <code>Web Inspector</code></p>
@@ -682,8 +695,8 @@ ul {
 </ol>
 </section>
   </div>
-  <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><h1 id="android-remote-debugging">Android remote debugging</h1>
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><h1 id="android">Android</h1>
 <ol>
 <li>In Android enable USB debugging by going to <code>Settings -&gt; About Phone</code><blockquote>
 <p>Tap <code>Build number</code> 7 times then return to the previous screen</p>
@@ -696,8 +709,12 @@ ul {
 </ol>
 </section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h1 id="unit-testing">Unit Testing</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h1 id="unit-testing-">Unit? Testing?</h1>
 <h4 id="split-functionality-into-contained-units-">Split functionality into contained units.</h4>
 <blockquote>
 <p>Ideally each function should perform one <strong>unit</strong> of work.</p>
@@ -708,7 +725,7 @@ ul {
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h1 id="javascript-unit-testing">JavaScript unit testing</h1>
 <p><a href="http://pivotal.github.com/jasmine/" target="_blank" style="border: none;">
   <img src="img/jasmine_logo.png" alt="Jasmine Logo" />
@@ -721,7 +738,7 @@ ul {
 </a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h1 id="a-blog-post">A blog post</h1>
 <pre><code class="lang-javascript"><span class="keyword">var</span> BlogPost = <span class="keyword">function</span>(title, content, date) {
     <span class="keyword">this</span>.title = title;
@@ -744,7 +761,7 @@ BlogPost.prototype.toString = <span class="keyword">function</span>() {
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h1 id="qunit">QUnit</h1>
 <pre><code class="lang-javascript">module(<span class="string">'Blog post test'</span>);
 
@@ -765,7 +782,7 @@ test(<span class="string">'Generates HTML'</span>, <span class="keyword">functio
 });</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h1 id="mocha">Mocha</h1>
 <pre><code class="lang-javascript">describe(<span class="string">'BlogPost test'</span>, <span class="keyword">function</span>() {
 
@@ -787,15 +804,15 @@ test(<span class="string">'Generates HTML'</span>, <span class="keyword">functio
 });</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h1 id="jasmine">Jasmine</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><h1 id="running-tests">Running tests</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h1 id="headless-browsers">Headless Browsers</h1>
 <p><img style="float: right;" alt="PhantomJS logo" src="img/phantomjs_logo.png" /></p>
 <h4 id="-phantomjs-http-phantomjs-org-"><a href="http://phantomjs.org/">PhantomJS</a></h4>
@@ -812,7 +829,7 @@ test(<span class="string">'Generates HTML'</span>, <span class="keyword">functio
 <p><strong>Con</strong>: Doesn&#39;t test actual browsers</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h1 id="automating-with-grunt">Automating with Grunt</h1>
 <p>Run tests in a headless browser and report to <a href="">Grunt</a>:</p>
 <ul>
@@ -830,7 +847,7 @@ grunt.initConfig({
 grunt.loadNpmTasks(<span class="string">'grunt-contrib-qunit'</span>);</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h1 id="test-runners">Test runners</h1>
 <p>Automate running your JavaScript tests <strong>in any available browser</strong> and make the results persistent.</p>
 <ul>
@@ -844,20 +861,21 @@ grunt.loadNpmTasks(<span class="string">'grunt-contrib-qunit'</span>);</code></p
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
-    <section class="slide-content"><h1 id="testee">Testee</h1>
-<p>Testee.JS runs your Mocha, QUnit or Jasmine unit tests from the command line using any browser.</p>
+  <div class="slide hidden" id="slide-27">
+    <section class="slide-content"><h1 id="-testee-logo-img-testee_logo-png-"><img src="img/testee_logo.png" alt="Testee Logo"></h1>
+<p>Testee runs your <em>Mocha</em>, <em>QUnit</em> or <em>Jasmine</em> unit tests from the command line using any browser.</p>
 <ul>
 <li>Runs on all browsers (supporting SocketIO)</li>
-<li>Many output formats
-<img src="img/testee_logo.png" alt="Testee Logo" style="float: right;" /></li>
+<li>Remote URL testing</li>
+<li>Many output formats</li>
 <li>CI integration</li>
 <li>BrowserStack support</li>
 <li>GruntJS Task</li>
+<li>Code coverage</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h1 id="continuous-integration">Continuous Integration</h1>
 <ul>
 <li>Use source control management system (SCM) for builds</li>
@@ -876,11 +894,11 @@ grunt.loadNpmTasks(<span class="string">'grunt-contrib-qunit'</span>);</code></p
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h1 id="functional-testing">Functional testing</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h1 id="functional-web-application-testing">Functional web application testing</h1>
 <h4 id="open-source-libraries">Open Source Libraries</h4>
 <ul>
@@ -891,7 +909,7 @@ grunt.loadNpmTasks(<span class="string">'grunt-contrib-qunit'</span>);</code></p
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h1 id="__funcunit__"><strong>FuncUnit</strong></h1>
 <p>Functional testing library built on top of <strong>jQuery</strong> and runs on <strong>QUnit</strong>, <strong>Jasmine</strong> or <strong>Mocha</strong>:</p>
 <ul>
@@ -909,10 +927,17 @@ grunt.loadNpmTasks(<span class="string">'grunt-contrib-qunit'</span>);</code></p
 });</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h1 id="next-month">Next Month</h1>
 <h2 id="js-bash">JS bash</h2>
-<p><strong>RXJS and Functional Reactive Programming</strong></p>
+<h3 id="functional-reactive-programming-with-rxjs">Functional Reactive Programming with RXJS</h3>
+<blockquote>
+<p>Kevin Barnabash</p>
+</blockquote>
+<h3 id="-nodebb-https-nodebb-org-and-managing-your-open-source-projects"><a href="https://nodebb.org/">NodeBB</a> and managing your open source projects</h3>
+<blockquote>
+<p>Julian Lam</p>
+</blockquote>
 </section>
   </div>
 
