@@ -83,9 +83,9 @@ logo: theme/logo.png
 - [Android SDK](http://developer.android.com/sdk/index.html) for Android emulators
 - [Genymotion](http://www.genymotion.com/): Android emulators that actually work
 - [modern.ie](https://modern.ie/en-us): Virtual machines with Internet Explorer
-- [Browsersync](http://www.browsersync.io/): Synchronised browser testing
+- [Browsersync](http://www.browsersync.io/): Synchronized browser testing
 - [Ghostlab](http://vanamco.com/ghostlab/): Synchronized browser testing for web and mobile
-
+- [Weinre](http://people.apache.org/~pmuellr/weinre-docs/latest/): WEb INspector REmote
 --
 
 # And Services
@@ -142,15 +142,17 @@ logo: theme/logo.png
 
 # JavaScript unit testing
 
-<a href="http://pivotal.github.com/jasmine/" target="_blank" style="border: none;">
+<div style="text-align: center; margin-top: 1em;">
+<p><a href="http://pivotal.github.com/jasmine/" target="_blank">
   <img src="img/jasmine_logo.png" alt="Jasmine Logo" />
-</a>
-<a href="http://qunitjs.com" target="_blank" style="border: none; float: right; margin-top: 6em;">
+</a></p>
+<p><a href="http://qunitjs.com" target="_blank">
   <img src="img/qunit_logo.png" alt="QUnit Logo" />
-</a>
-<a href="http://visionmedia.github.com/mocha/" target="_blank" style="border: none; margin-top: 4em;">
+</a></p>
+<p><a href="http://visionmedia.github.com/mocha/" target="_blank">
   <img src="img/mocha_logo.png" alt="Mocha Logo" />
-</a>
+</a></p>
+</div>
 
 --
 
@@ -222,7 +224,9 @@ describe('BlogPost test', function() {
 		post.publish();
 
 		var html = post.toString();
-		assert(html.length > 0, 'Some text generated');
+		assert.equal(html.length, "<h1>hello</h1>" +
+			"<h6>Published on " + now.toString() + "</h6>" +
+			"<p>Hello world</p>", 'HTML generated');
 	});
 });
 ```
@@ -231,7 +235,28 @@ describe('BlogPost test', function() {
 
 # Jasmine
 
+```javascript
+describe('Blog post test', function () {
+	var post;
 
+	beforeEach(function() { post = new BlogPost('What', 'Now'); });
+	afterEach(function() { post.published = false; });
+
+	it('Should be published at the current time', function() {
+		var now = new Date();
+		var post = new BlogPost('Hello', 'Hello world');
+
+		expect(post.date.getTime()).toBe(now.getTime());
+	});
+
+	it('Generates some neat HTML', function() {
+		post.publish();
+		expect(post.published).toBe(true);
+		expect(post.toString()).toContain(post.title)
+		expect(post.toString()).toMatch(post.content)
+	});
+});
+```
 
 --
 

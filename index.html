@@ -659,8 +659,9 @@ ul {
 <li><a href="http://developer.android.com/sdk/index.html">Android SDK</a> for Android emulators</li>
 <li><a href="http://www.genymotion.com/">Genymotion</a>: Android emulators that actually work</li>
 <li><a href="https://modern.ie/en-us">modern.ie</a>: Virtual machines with Internet Explorer</li>
-<li><a href="http://www.browsersync.io/">Browsersync</a>: Synchronised browser testing</li>
+<li><a href="http://www.browsersync.io/">Browsersync</a>: Synchronized browser testing</li>
 <li><a href="http://vanamco.com/ghostlab/">Ghostlab</a>: Synchronized browser testing for web and mobile</li>
+<li><a href="http://people.apache.org/~pmuellr/weinre-docs/latest/">Weinre</a>: WEb INspector REmote</li>
 </ul>
 </section>
   </div>
@@ -727,16 +728,17 @@ ul {
   </div>
   <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h1 id="javascript-unit-testing">JavaScript unit testing</h1>
-<p><a href="http://pivotal.github.com/jasmine/" target="_blank" style="border: none;">
+<div style="text-align: center; margin-top: 1em;">
+<p><a href="http://pivotal.github.com/jasmine/" target="_blank">
   <img src="img/jasmine_logo.png" alt="Jasmine Logo" />
-</a>
-<a href="http://qunitjs.com" target="_blank" style="border: none; float: right; margin-top: 6em;">
+</a></p>
+<p><a href="http://qunitjs.com" target="_blank">
   <img src="img/qunit_logo.png" alt="QUnit Logo" />
-</a>
-<a href="http://visionmedia.github.com/mocha/" target="_blank" style="border: none; margin-top: 4em;">
+</a></p>
+<p><a href="http://visionmedia.github.com/mocha/" target="_blank">
   <img src="img/mocha_logo.png" alt="Mocha Logo" />
 </a></p>
-</section>
+</div></section>
   </div>
   <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h1 id="a-blog-post">A blog post</h1>
@@ -799,13 +801,35 @@ test(<span class="string">'Generates HTML'</span>, <span class="keyword">functio
         post.publish();
 
         <span class="keyword">var</span> html = post.toString();
-        assert(html.length &gt; <span class="number">0</span>, <span class="string">'Some text generated'</span>);
+        assert.equal(html.length, <span class="string">"&lt;h1&gt;hello&lt;/h1&gt;"</span> +
+            <span class="string">"&lt;h6&gt;Published on "</span> + now.toString() + <span class="string">"&lt;/h6&gt;"</span> +
+            <span class="string">"&lt;p&gt;Hello world&lt;/p&gt;"</span>, <span class="string">'HTML generated'</span>);
     });
 });</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h1 id="jasmine">Jasmine</h1>
+<pre><code class="lang-javascript">describe(<span class="string">'Blog post test'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
+    <span class="keyword">var</span> post;
+
+    beforeEach(<span class="keyword">function</span>() { post = <span class="keyword">new</span> BlogPost(<span class="string">'What'</span>, <span class="string">'Now'</span>); });
+    afterEach(<span class="keyword">function</span>() { post.published = <span class="literal">false</span>; });
+
+    it(<span class="string">'Should be published at the current time'</span>, <span class="keyword">function</span>() {
+        <span class="keyword">var</span> now = <span class="keyword">new</span> Date();
+        <span class="keyword">var</span> post = <span class="keyword">new</span> BlogPost(<span class="string">'Hello'</span>, <span class="string">'Hello world'</span>);
+
+        expect(post.date.getTime()).toBe(now.getTime());
+    });
+
+    it(<span class="string">'Generates some neat HTML'</span>, <span class="keyword">function</span>() {
+        post.publish();
+        expect(post.published).toBe(<span class="literal">true</span>);
+        expect(post.toString()).toContain(post.title)
+        expect(post.toString()).toMatch(post.content)
+    });
+});</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-23">
